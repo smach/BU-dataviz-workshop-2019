@@ -1,0 +1,318 @@
+City,Metro,County,SizeRank,Price
+Boston,Boston-Cambridge-Newton,Suffolk County,26,601300
+Worcester,Worcester,Worcester County,154,251800
+Springfield,Springfield,Hampden County,195,162900
+Lowell,Boston-Cambridge-Newton,Middlesex County,330,319500
+Cambridge,Boston-Cambridge-Newton,Middlesex County,337,1592600
+Brockton,Boston-Cambridge-Newton,Plymouth County,417,300900
+New Bedford,Providence-Warwick,Bristol County,438,242600
+Lynn,Boston-Cambridge-Newton,Essex County,453,368400
+Newton,Boston-Cambridge-Newton,Middlesex County,472,1203500
+Fall River,Providence-Warwick,Bristol County,482,261900
+Quincy,Boston-Cambridge-Newton,Norfolk County,535,517300
+Lawrence,Boston-Cambridge-Newton,Essex County,577,296000
+Somerville,Boston-Cambridge-Newton,Middlesex County,583,901400
+Framingham,Boston-Cambridge-Newton,Middlesex County,682,461500
+Waltham,Boston-Cambridge-Newton,Middlesex County,786,616200
+Haverhill,Boston-Cambridge-Newton,Essex County,790,355000
+Malden,Boston-Cambridge-Newton,Middlesex County,823,494100
+Brookline,Boston-Cambridge-Newton,Norfolk County,845,1891300
+Medford,Boston-Cambridge-Newton,Middlesex County,865,642500
+Taunton,Providence-Warwick,Bristol County,897,316800
+Chicopee,Springfield,Hampden County,901,188300
+Weymouth,Boston-Cambridge-Newton,Norfolk County,921,418300
+Peabody,Boston-Cambridge-Newton,Essex County,997,465800
+Plymouth,Boston-Cambridge-Newton,Plymouth County,1038,371100
+Revere,Boston-Cambridge-Newton,Suffolk County,1055,445700
+Methuen,Boston-Cambridge-Newton,Essex County,1065,372200
+Everett,Boston-Cambridge-Newton,Middlesex County,1176,450900
+Arlington,Boston-Cambridge-Newton,Middlesex County,1177,808000
+Barnstable,Barnstable Town,Barnstable County,1182,395400
+Attleboro,Providence-Warwick,Bristol County,1197,324300
+Pittsfield,Pittsfield,Berkshire County,1209,165900
+Billerica,Boston-Cambridge-Newton,Middlesex County,1253,448300
+Westfield,Springfield,Hampden County,1274,254000
+Fitchburg,Worcester,Worcester County,1291,219400
+Leominster,Worcester,Worcester County,1294,284900
+Holyoke,Springfield,Hampden County,1314,209600
+Salem,Boston-Cambridge-Newton,Essex County,1317,436900
+Amherst,Springfield,Hampshire County,1337,374700
+Marlborough,Boston-Cambridge-Newton,Middlesex County,1344,387500
+Woburn,Boston-Cambridge-Newton,Middlesex County,1362,504800
+Chelsea,Boston-Cambridge-Newton,Suffolk County,1397,449300
+Braintree,Boston-Cambridge-Newton,Norfolk County,1436,523200
+Beverly,Boston-Cambridge-Newton,Essex County,1448,491400
+Shrewsbury,Worcester,Worcester County,1453,453700
+Natick,Boston-Cambridge-Newton,Middlesex County,1501,619800
+Andover,Boston-Cambridge-Newton,Essex County,1514,673100
+Chelmsford,Boston-Cambridge-Newton,Middlesex County,1516,444500
+Dartmouth,Providence-Warwick,Bristol County,1548,371200
+Randolph,Boston-Cambridge-Newton,Norfolk County,1560,375600
+Watertown,Boston-Cambridge-Newton,Middlesex County,1564,690000
+Lexington,Boston-Cambridge-Newton,Middlesex County,1610,1084800
+Franklin,Boston-Cambridge-Newton,Norfolk County,1623,461700
+Dracut,Boston-Cambridge-Newton,Middlesex County,1724,361400
+North Andover,Boston-Cambridge-Newton,Essex County,1755,598500
+Tewksbury,Boston-Cambridge-Newton,Middlesex County,1758,442000
+Needham,Boston-Cambridge-Newton,Norfolk County,1767,945400
+Norwood,Boston-Cambridge-Newton,Norfolk County,1848,490100
+North Attleboro,Providence-Warwick,Bristol County,1869,388600
+West Springfield,Springfield,Hampden County,1871,229000
+Wellesley,Boston-Cambridge-Newton,Norfolk County,1872,1307500
+Agawam,Springfield,Hampden County,1891,235900
+Saugus,Boston-Cambridge-Newton,Essex County,1899,462100
+Milford,Worcester,Worcester County,1912,359400
+Northampton,Springfield,Hampshire County,1923,333300
+Stoughton,Boston-Cambridge-Newton,Norfolk County,1925,396100
+Milton,Boston-Cambridge-Newton,Norfolk County,1976,696500
+Danvers,Boston-Cambridge-Newton,Essex County,1983,493400
+Bridgewater,Boston-Cambridge-Newton,Plymouth County,1984,412800
+Melrose,Boston-Cambridge-Newton,Middlesex County,1988,652200
+Gloucester,Boston-Cambridge-Newton,Essex County,2001,481300
+Wakefield,Boston-Cambridge-Newton,Middlesex County,2068,557900
+Reading,Boston-Cambridge-Newton,Middlesex County,2140,616300
+Burlington,Boston-Cambridge-Newton,Middlesex County,2154,584800
+Belmont,Boston-Cambridge-Newton,Middlesex County,2178,1145300
+Walpole,Boston-Cambridge-Newton,Norfolk County,2189,527000
+Dedham,Boston-Cambridge-Newton,Norfolk County,2200,520700
+Middleborough,Boston-Cambridge-Newton,Plymouth County,2288,346400
+Easton,Providence-Warwick,Bristol County,2312,461000
+Westford,Boston-Cambridge-Newton,Middlesex County,2315,572200
+Mansfield,Providence-Warwick,Bristol County,2326,479900
+Yarmouth,Barnstable Town,Barnstable County,2330,345100
+Acton,Boston-Cambridge-Newton,Middlesex County,2360,628900
+Wilmington,Boston-Cambridge-Newton,Middlesex County,2379,523300
+Marshfield,Boston-Cambridge-Newton,Plymouth County,2391,465700
+Winchester,Boston-Cambridge-Newton,Middlesex County,2403,1142300
+Canton,Boston-Cambridge-Newton,Norfolk County,2410,611300
+Hingham,Boston-Cambridge-Newton,Plymouth County,2465,844600
+Stoneham,Boston-Cambridge-Newton,Middlesex County,2498,576500
+Wareham,Boston-Cambridge-Newton,Plymouth County,2539,278600
+Ludlow,Springfield,Hampden County,2559,226100
+Gardner,Worcester,Worcester County,2707,202600
+Hudson,Boston-Cambridge-Newton,Middlesex County,2739,386900
+Concord,Boston-Cambridge-Newton,Middlesex County,2749,972200
+East Falmouth,Barnstable Town,Barnstable County,2773,373100
+Bourne,Barnstable Town,Barnstable County,2775,411700
+Somerset,Providence-Warwick,Bristol County,2822,286600
+Westborough,Worcester,Worcester County,2912,525000
+Sudbury,Boston-Cambridge-Newton,Middlesex County,2914,733400
+Holden,Worcester,Worcester County,2968,327100
+Grafton,Worcester,Worcester County,2969,400800
+Pembroke,Boston-Cambridge-Newton,Plymouth County,2979,413100
+Winthrop,Boston-Cambridge-Newton,Suffolk County,2983,517600
+Sharon,Boston-Cambridge-Newton,Norfolk County,2984,568000
+South Hadley,Springfield,Hampshire County,3004,245800
+Newburyport,Boston-Cambridge-Newton,Essex County,3026,591500
+Rockland,Boston-Cambridge-Newton,Plymouth County,3049,354500
+Greenfield,Greenfield Town,Franklin County,3065,197700
+Foxborough,Boston-Cambridge-Newton,Norfolk County,3086,447600
+Amesbury,Boston-Cambridge-Newton,Essex County,3148,387000
+Bellingham,Boston-Cambridge-Newton,Norfolk County,3157,333700
+Southbridge,Worcester,Worcester County,3187,211600
+Swansea,Providence-Warwick,Bristol County,3203,296600
+Hopkinton,Boston-Cambridge-Newton,Middlesex County,3222,630000
+Auburn,Worcester,Worcester County,3224,278400
+Northbridge,Worcester,Worcester County,3249,346800
+Abington,Boston-Cambridge-Newton,Plymouth County,3255,398900
+East Longmeadow,Springfield,Hampden County,3279,262500
+Easthampton,Springfield,Hampshire County,3286,265900
+Longmeadow,Springfield,Hampden County,3331,357200
+Westport,Providence-Warwick,Bristol County,3343,400800
+North Reading,Boston-Cambridge-Newton,Middlesex County,3346,562200
+Westwood,Boston-Cambridge-Newton,Norfolk County,3417,739500
+Scituate,Boston-Cambridge-Newton,Plymouth County,3446,581700
+Fairhaven,Providence-Warwick,Bristol County,3497,303800
+Northborough,Worcester,Worcester County,3510,455200
+Whitman,Boston-Cambridge-Newton,Plymouth County,3528,345700
+Belchertown,Springfield,Hampshire County,3532,281300
+Bedford,Boston-Cambridge-Newton,Middlesex County,3550,708400
+Seekonk,Providence-Warwick,Bristol County,3564,348500
+Wilbraham,Springfield,Hampden County,3580,296300
+Hanover,Boston-Cambridge-Newton,Plymouth County,3613,500200
+East Bridgewater,Boston-Cambridge-Newton,Plymouth County,3637,403100
+Duxbury,Boston-Cambridge-Newton,Plymouth County,3651,638700
+Holliston,Boston-Cambridge-Newton,Middlesex County,3653,461000
+Dennis,Barnstable Town,Barnstable County,3688,388900
+Oxford,Worcester,Worcester County,3714,249200
+Uxbridge,Worcester,Worcester County,3746,335400
+Mashpee,Barnstable Town,Barnstable County,3750,436700
+Clinton,Worcester,Worcester County,3751,281700
+Wayland,Boston-Cambridge-Newton,Middlesex County,3757,742900
+Marblehead,Boston-Cambridge-Newton,Essex County,3761,715700
+Charlton,Worcester,Worcester County,3782,311100
+Millbury,Worcester,Worcester County,3798,299500
+North Adams,Pittsfield,Berkshire County,3817,134700
+Medway,Boston-Cambridge-Newton,Norfolk County,3861,445000
+Swampscott,Boston-Cambridge-Newton,Essex County,3912,572300
+Ipswich,Boston-Cambridge-Newton,Essex County,3977,564300
+Medfield,Boston-Cambridge-Newton,Norfolk County,3998,665900
+Lynnfield,Boston-Cambridge-Newton,Essex County,4014,677800
+Kingston,Boston-Cambridge-Newton,Plymouth County,4054,422000
+Sandwich,Barnstable Town,Barnstable County,4084,388000
+Tyngsboro,Boston-Cambridge-Newton,Middlesex County,4127,426700
+Pepperell,Boston-Cambridge-Newton,Middlesex County,4150,359400
+Rehoboth,Providence-Warwick,Bristol County,4154,423700
+Weston,Boston-Cambridge-Newton,Middlesex County,4174,1530100
+Spencer,Worcester,Worcester County,4186,250500
+Athol,Worcester,Worcester County,4241,167300
+Dudley,Worcester,Worcester County,4249,272400
+Norfolk,Boston-Cambridge-Newton,Norfolk County,4255,533300
+Wrentham,Boston-Cambridge-Newton,Norfolk County,4279,466100
+Leicester,Worcester,Worcester County,4362,260100
+Lakeville,Boston-Cambridge-Newton,Plymouth County,4373,395600
+Carver,Boston-Cambridge-Newton,Plymouth County,4396,490100
+Lunenburg,Worcester,Worcester County,4410,319100
+Groton,Boston-Cambridge-Newton,Middlesex County,4412,497500
+Norwell,Boston-Cambridge-Newton,Plymouth County,4494,630700
+Winchendon,Worcester,Worcester County,4539,220200
+Holbrook,Boston-Cambridge-Newton,Norfolk County,4548,341100
+Nantucket,NA,Nantucket County,4552,1711900
+Maynard,Boston-Cambridge-Newton,Middlesex County,4564,399700
+Hull,Boston-Cambridge-Newton,Plymouth County,4591,433600
+Acushnet,Providence-Warwick,Bristol County,4603,314400
+Ware,Springfield,Hampshire County,4759,190900
+Brewster,Barnstable Town,Barnstable County,4781,471800
+Southborough,Worcester,Worcester County,4789,641600
+Southwick,Springfield,Hampden County,4842,257000
+Harwich,Barnstable Town,Barnstable County,4844,446100
+Littleton,Boston-Cambridge-Newton,Middlesex County,4884,481300
+Middleton,Boston-Cambridge-Newton,Essex County,4894,636900
+Townsend,Boston-Cambridge-Newton,Middlesex County,4939,297500
+Sutton,Worcester,Worcester County,5000,383500
+Blackstone,Worcester,Worcester County,5021,301600
+Plainville,Boston-Cambridge-Newton,Norfolk County,5118,387000
+Douglas,Worcester,Worcester County,5147,334700
+Salisbury,Boston-Cambridge-Newton,Essex County,5261,379300
+Georgetown,Boston-Cambridge-Newton,Essex County,5274,479400
+Adams,Pittsfield,Berkshire County,5373,143100
+Falmouth,Barnstable Town,Barnstable County,5378,626300
+Hamilton,Boston-Cambridge-Newton,Essex County,5432,570400
+Boxford,Boston-Cambridge-Newton,Essex County,5441,670900
+Millis,Boston-Cambridge-Newton,Norfolk County,5445,422800
+West Boylston,Worcester,Worcester County,5502,315400
+Westminster,Worcester,Worcester County,5509,296500
+Sterling,Worcester,Worcester County,5520,359600
+Halifax,Boston-Cambridge-Newton,Plymouth County,5616,380500
+Orange,Greenfield Town,Franklin County,5640,157100
+Upton,Worcester,Worcester County,5646,516700
+Williamstown,Pittsfield,Berkshire County,5700,319200
+Ayer,Boston-Cambridge-Newton,Middlesex County,5751,354600
+Shirley,Boston-Cambridge-Newton,Middlesex County,5777,347000
+Lancaster,Worcester,Worcester County,5802,352700
+Dighton,Providence-Warwick,Bristol County,5831,345500
+Vineyard Haven,Vineyard Haven,Dukes County,5907,664500
+West Bridgewater,Boston-Cambridge-Newton,Plymouth County,5978,361300
+Stow,Boston-Cambridge-Newton,Middlesex County,5987,528000
+Great Barrington,Pittsfield,Berkshire County,6034,346700
+Newbury,Boston-Cambridge-Newton,Essex County,6082,553600
+Dalton,Pittsfield,Berkshire County,6157,186700
+Berkley,Providence-Warwick,Bristol County,6220,380100
+Topsfield,Boston-Cambridge-Newton,Essex County,6276,617900
+Merrimac,Boston-Cambridge-Newton,Essex County,6317,410900
+Mattapoisett,Boston-Cambridge-Newton,Plymouth County,6459,443700
+Sturbridge,Worcester,Worcester County,6478,306700
+Granby,Springfield,Hampshire County,6481,255500
+Ashburnham,Worcester,Worcester County,6482,260000
+Southampton,Springfield,Hampshire County,6568,318100
+Mendon,Worcester,Worcester County,6606,437800
+Hopedale,Worcester,Worcester County,6623,382900
+Rockport,Boston-Cambridge-Newton,Essex County,6644,609400
+Dover,Boston-Cambridge-Newton,Norfolk County,6676,1176400
+Cohasset,Boston-Cambridge-Newton,Norfolk County,6677,888700
+Lee,Pittsfield,Berkshire County,6683,246700
+Hadley,Springfield,Hampshire County,6766,349000
+Harvard,Worcester,Worcester County,6873,354300
+Rowley,Boston-Cambridge-Newton,Essex County,6943,528900
+Rochester,Boston-Cambridge-Newton,Plymouth County,6976,412300
+Bolton,Worcester,Worcester County,7056,574200
+Manchester,Boston-Cambridge-Newton,Essex County,7065,920900
+Hampden,Springfield,Hampden County,7166,275200
+Warren,Worcester,Worcester County,7181,218300
+Barre,Worcester,Worcester County,7223,235400
+Carlisle,Boston-Cambridge-Newton,Middlesex County,7236,816700
+Wenham,Boston-Cambridge-Newton,Essex County,7269,628000
+Chatham,Barnstable Town,Barnstable County,7312,712000
+Paxton,Worcester,Worcester County,7319,323300
+Lenox,Pittsfield,Berkshire County,7326,324500
+Marion,Boston-Cambridge-Newton,Plymouth County,7328,490300
+Forestdale,Barnstable Town,Barnstable County,7396,358700
+Lincoln,Boston-Cambridge-Newton,Middlesex County,7428,1186300
+West Newbury,Boston-Cambridge-Newton,Essex County,7507,585600
+Orleans,Barnstable Town,Barnstable County,7525,741600
+North Brookfield,Worcester,Worcester County,7534,229300
+Templeton,Worcester,Worcester County,7679,240700
+Hubbardston,Worcester,Worcester County,7699,286300
+Avon,Boston-Cambridge-Newton,Norfolk County,7779,343000
+Sherborn,Boston-Cambridge-Newton,Middlesex County,7848,805100
+Eastham,Barnstable Town,Barnstable County,7873,478600
+Boylston,Worcester,Worcester County,7958,398900
+Turners Falls,Greenfield Town,Franklin County,7963,191900
+Edgartown,Vineyard Haven,Dukes County,8446,939500
+West Brookfield,Worcester,Worcester County,8514,243700
+Brimfield,Springfield,Hampden County,8573,262200
+Sunderland,Greenfield Town,Franklin County,8629,311100
+South Deerfield,Greenfield Town,Franklin County,8752,288200
+Princeton,Worcester,Worcester County,8866,375500
+East Sandwich,Barnstable Town,Barnstable County,8904,494300
+Brookfield,Worcester,Worcester County,8950,249000
+Dunstable,Boston-Cambridge-Newton,Middlesex County,9030,499800
+Hatfield,Springfield,Hampshire County,9093,324700
+Plympton,Boston-Cambridge-Newton,Plymouth County,9142,418000
+Millville,Worcester,Worcester County,9154,316100
+Sheffield,Pittsfield,Berkshire County,9169,276400
+Ashby,Boston-Cambridge-Newton,Middlesex County,9186,271000
+Cheshire,Pittsfield,Berkshire County,9191,201700
+Berlin,Worcester,Worcester County,9344,438800
+Northfield,Greenfield Town,Franklin County,9433,227200
+North Falmouth,Barnstable Town,Barnstable County,9995,547800
+Williamsburg,Springfield,Hampshire County,10284,295700
+Wellfleet,Barnstable Town,Barnstable County,10335,586200
+Provincetown,Barnstable Town,Barnstable County,10359,990000
+Holland,Springfield,Hampden County,10408,226600
+East Brookfield,Worcester,Worcester County,10580,246000
+Tisbury,Vineyard Haven,Dukes County,10587,728900
+Stockbridge,Pittsfield,Berkshire County,10830,427400
+Wales,Springfield,Hampden County,10965,217900
+Leverett,Greenfield Town,Franklin County,11023,338100
+Huntington,Springfield,Hampshire County,11038,194900
+Hinsdale,Pittsfield,Berkshire County,11054,209000
+Montague,Greenfield Town,Franklin County,11065,252900
+Nahant,Boston-Cambridge-Newton,Essex County,11123,649300
+Westhampton,Springfield,Hampshire County,11255,321600
+Shelburne,Greenfield Town,Franklin County,11264,259700
+Oakham,Worcester,Worcester County,11266,294300
+Shutesbury,Greenfield Town,Franklin County,11308,252600
+Conway,Greenfield Town,Franklin County,11340,286200
+Bernardston,Greenfield Town,Franklin County,11432,223900
+Becket,Pittsfield,Berkshire County,11455,215800
+Granville,Springfield,Hampden County,11486,269600
+Colrain,Greenfield Town,Franklin County,11516,188200
+Erving,Greenfield Town,Franklin County,11532,192200
+Gill,Greenfield Town,Franklin County,11562,225300
+Clarksburg,Pittsfield,Berkshire County,11565,151000
+Phillipston,Worcester,Worcester County,11614,239400
+Ashfield,Greenfield Town,Franklin County,11629,254400
+Chester,Springfield,Hampden County,11711,178200
+Fiskdale,Worcester,Worcester County,11738,291800
+Truro,Barnstable Town,Barnstable County,11744,742600
+Richmond,Pittsfield,Berkshire County,11788,365300
+Russell,Springfield,Hampden County,11923,229600
+Royalston,Worcester,Worcester County,12016,216800
+Pelham,Springfield,Hampshire County,12100,310500
+Chesterfield,Springfield,Hampshire County,12174,238700
+Petersham,Worcester,Worcester County,12213,270200
+West Stockbridge,Pittsfield,Berkshire County,12221,382700
+Baldwinville,Worcester,Worcester County,12233,198400
+Goshen,Springfield,Hampshire County,12241,247800
+Blandford,Springfield,Hampden County,12252,227900
+Chilmark,Vineyard Haven,Dukes County,12368,1596700
+New Salem,Greenfield Town,Franklin County,12413,225000
+White Island Shores,Boston-Cambridge-Newton,Plymouth County,12461,264500
+Worthington,Springfield,Hampshire County,12482,243500
+Sandisfield,Pittsfield,Berkshire County,12545,251300
+Monterey,Pittsfield,Berkshire County,12577,450800
+Tolland,Springfield,Hampden County,12661,269200
+Charlemont,Greenfield Town,Franklin County,12668,198200
+Egremont,Pittsfield,Berkshire County,12669,441400
+Aquinnah,Vineyard Haven,Dukes County,12685,1352600

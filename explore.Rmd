@@ -1,0 +1,404 @@
+---
+title: "Intro to Data Visualization in R"
+author: "Sharon Machlis"
+date: "5/16/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+source("config.R")
+```
+
+installs and loads necessary packages
+
+Let's start with two data sets that have home price information by Zip Code from Zillow as well as a little U.S. Census Bureau data. More specifically, there's median single-family home value in one and median price per square foot in the other, by Zip Code in 4 eastern Massachusetts counties: Suffolk (mostly Boston), Middlesex (just to the west), Essex (just to the north), and Norfolk (Brookline & others)
+
+I'll read them in with the readr package, which is good at keeping zip codes as character strings and not numbers (as numbers, here in New England the initial 0 gets stripped out)
+
+```{r}
+price_median <- readr::read_csv("data/zillow_data_median_sf_price.csv")
+
+price_sqft <- readr::read_csv("data/zillow_data_price_per_sq_ft.csv")
+
+```
+
+Before doing any analysis, it's always good to take a few basic steps to get familiar with the data set. Let's look at the price_median data set.
+
+```{r}
+head(price_median)
+tail(price_median) # make sure there's no total row at the end to screw things up
+```
+
+Check out the structure
+
+```{r}
+str(price_median)
+```
+
+OR
+
+```{r}
+dplyr::glimpse(price_median)
+
+summary(price_median)
+```
+
+Some more substantial summaries
+
+```{r eval = FALSE}
+skimr::skim(price_median)
+```
+
+
+```{r}
+Hmisc::describe(price_median)
+```
+
+Visualizations make it much easier to see things like distributions and outliers.
+
+Don't know what type of visualization to use for exploring the data you have? 
+[https://www.data-to-viz.com](https://www.data-to-viz.com/) gives you suggestions based on the type of data, plus code and advice. Super useful.
+
+Let's first look at just current median price. One numerical. We can do a histogram.
+
+I'm going to show you both base R built-in graphics and the most popular R package for visualization, widely used among journalists and others, called ggplot2. It's mostly a matter of personal preference which you want to use. I use both, sometimes base R for 'quick and dirty' and ggplot when I want to do more customization.
+
+Quick base R histogram -- hist() function. It will try to guess good breaks for your bars.
+
+```{r}
+hist(price_median$MedianSFPrice)
+```
+
+With headline and better x axis label. main for headline, xlab for x axis
+
+```{r}
+hist(price_median$MedianSFPrice , main = "Zillow median home prices, March 2019", xlab = "Price")
+```
+
+ggplot2 is a little more involved. 
+
+The first line only sets up what the data frame is, what the x and y values should be, and if you want to group by a category or color-fill by a category. The first line doesn't actually display anything.
+
+The second line says what kind of viz you want. Syntax is
+
+```{r eval=FALSE}
+ggplot(mydata, aes(x = xcolumn, y = ycolumn)) +
+     geom_viztype()
+```
+
+In this case we only have one value so don't need to specify x and y
+
+```{r}
+ggplot(price_median, aes(MedianSFPrice)) +
+  geom_histogram()
+```
+
+ggplot2's histogram defaults to 30 bins but scolds you to pick something with better intention. Although that looks decent to me, we can try out some others.
+
+```{r}
+ggplot(price_median, aes(MedianSFPrice)) +
+  geom_histogram(binwidth = 50000)
+```
+
+
+```{r}
+ggplot(price_median, aes(MedianSFPrice)) +
+  geom_histogram(binwidth = 100000)
+```
+
+There is a LOT more customizing you can do. Here I'll make the bars blue outlined in white.
+
+```{r}
+# Change the bar fill color and outline color
+ggplot(price_median, aes(MedianSFPrice)) +
+  geom_histogram(binwidth = 50000, fill = "darkblue", color = "white")
+```
+
+I'll also add a headline and change the default X axis label with ggtitle and xlab. 
+
+```{r}
+ggplot(price_median, aes(MedianSFPrice)) +
+  geom_histogram(binwidth = 50000, fill = "darkblue", color = "white") +
+  ggtitle("Zillow median home prices, March 2019") +
+  xlab("Price") 
+```
+
+Add a headline and x-axis label, change the theme
+
+```{r}
+ggplot(price_median, aes(MedianSFPrice)) +
+  geom_histogram(binwidth = 50000, fill = "darkblue", color = "white")+
+  ggtitle("Zillow median home prices, March 2019") +
+  xlab("Price") +
+  theme_light()
+```
+
+Add dollar signs and commas to the axis
+
+```{r}
+ggplot(price_median, aes(MedianSFPrice)) +
+  geom_histogram(binwidth = 50000, fill = "darkblue", color = "white")+
+  ggtitle("Zillow median home prices, March 2019") +
+  xlab("Price") +
+  theme_light() +
+  scale_x_continuous(labels = dollar)
+```
+
+You can play with lots of themes and the ggthemes package :-)
+
+```{r}
+ggplot(price_median, aes(MedianSFPrice)) +
+  geom_histogram(binwidth = 50000, fill = "darkblue", color = "white")+
+  labs(title = "Median Home Prices, March 2019",
+       subtitle = "Source: Zillow Mass. data from Suffolk, Middlesex, Essex, and Norfolk counties "
+       ) +
+  xlab("Price") +
+  scale_x_continuous(labels = dollar) +
+  ggthemes::theme_economist() 
+```
+
+
+But back to our data. Let's take another look at distribution, this time with a box plot
+
+Base R
+
+```{r}
+boxplot(price_median$MedianSFPrice)
+```
+
+Lots of expensive outliers
+
+ggplot2 - here I use color suggestions from Data to Viz's R graph gallery.
+
+Since I don't have an x column but boxplot looks for one, I'm using an empty character string for that and the label
+
+```{r}
+ggplot(price_median, aes(x = "", y = MedianSFPrice)) +
+  geom_boxplot(fill="slateblue", alpha=0.2) +
+  xlab("")
+```
+
+Again I add dollar sign and commas to make y axis easier to read
+
+```{r}
+ggplot(price_median, aes(x = "", y = MedianSFPrice)) +
+  geom_boxplot(fill="slateblue", alpha=0.2) +
+  xlab("") +
+  scale_y_continuous(labels = dollar)
+```
+
+A bit easier to see those expensive outliers.
+
+Where ggplot also comes in handy is if we'd like to create multiple boxplots by a category, such as one box plot per county. All we need to do as put county on the X axis!
+
+```{r}
+ggplot(price_median, aes(x = County, y = MedianSFPrice)) +
+  geom_boxplot(fill="slateblue", alpha=0.2) 
+```
+
+That's a bit of a different look.
+
+
+What about Boston, Cambridge, and Somerville? Let's filter our data set for just those 2 cities:
+
+```{r}
+
+bos_cam_som <- filter(price_median, City %in% c("Boston", "Cambridge", "Somerville"))
+
+ggplot(bos_cam_som, aes(x = City, y = MedianSFPrice)) +
+  geom_boxplot(fill="slateblue", alpha=0.2) 
+```
+
+Well that's interesting. 
+
+Now let's take a look at median price *per square foot* in Boston, Cambridge, and Somerville. 
+
+```{r}
+bos_cam_som_per_sq_ft <- filter(price_sqft, City %in% c("Boston", "Cambridge", "Somerville"))
+
+ggplot(bos_cam_som_per_sq_ft, aes(x = City, y = PricePerSqFt)) +
+  geom_boxplot(fill="slateblue", alpha=0.2) 
+```
+
+That is incredibly different. Remember that this is looking at ONE MEDIAN PER ZIP CODE, not individual prices, so it's looking at DIFFERENCES IN NEIGHBORHOOD MEDIANS. Looks like there may be a much greater difference in median home sizes by Zip Code in Boston. Also look at those two extremely pricey Zip Code outliers in Boston.
+
+ Median price vs percent white?
+
+### scatterplot
+
+base R
+
+```{r}
+plot(price_median$PctNonLatinxWhite, price_median$MedianSFPrice)
+```
+
+Could there be  relationship? It's possible to make this base R look better and add a regression line, but I tend to do that work in ggplot.
+
+Remember, first line of code sets up the data set, x values and y values. Second line says what type of "geom" viz type  you want.
+
+```{r}
+ggplot(price_median, aes(PctNonLatinxWhite, MedianSFPrice)) +
+  geom_point() 
+```
+  
+
+If you'd like to see which dots are what counties, you can color by county:
+
+```{r}
+ggplot(price_median, aes(PctNonLatinxWhite, MedianSFPrice, color = County)) +
+  geom_point() 
+```
+
+Things are a little hard to see with the grey background, I'll change the theme to get rid of the grid lines altogether and bump up the dot size a bit.
+
+```{r}
+ggplot(price_median, aes(PctNonLatinxWhite, MedianSFPrice, color = County)) +
+  geom_point(size = 2) +
+  theme_few() # named for Stephen Few, well known in the data viz field
+```
+
+It would be cool to be able to mouse over the dots and see underlying data, including the city. The plotly package turns a ggplot static plot into a JavaScript one! Just wrap your code in the ggplotly function.
+
+
+```{r}
+plotly::ggplotly(
+  ggplot(price_median, aes(PctNonLatinxWhite, MedianSFPrice, color = County)) +
+    geom_point(size = 2) +
+    theme_few() # named for Stephen Few, well known in the data viz field
+)
+```
+
+I can't tell you why, but the syntax for adding fields to the tooltip is something like
+
+`text =  paste("mycolumn:", mycolumn)`
+
+```{r}
+ggplot(price_median, aes(PctNonLatinxWhite, MedianSFPrice, color = County, text = paste("City:", City))) +
+  geom_point(size = 2) +
+  theme_few() # named for Stephen Few, well known in the data viz field
+
+
+plotly::ggplotly(
+  ggplot(price_median, aes(PctNonLatinxWhite, MedianSFPrice, color = County, text = paste("City:", City))) +
+    geom_point(size = 2) +
+    theme_few() # named for Stephen Few, well known in the data viz field
+)
+```
+
+Double click on the legend to just look at one county
+
+If you want to learn more about plotly and R, check out:<br />
+[https://plot.ly/r/](https://plot.ly/r/)
+[https://plotly-r.com/overview.html](https://plotly-r.com/overview.html)
+
+Note that you can store a graph in a variable, just like any other value
+
+```{r}
+mygraph <- ggplot(price_median, aes(PctNonLatinxWhite, MedianSFPrice, color = County, text = paste("City:", City))) +
+  geom_point(size = 2) +
+  theme_few() # named for Stephen Few, well known in the data viz field
+```
+
+```{r}
+mygraph
+```
+
+```{r}
+plotly::ggplotly(
+  mygraph
+)
+```
+
+Note also you can just use ggplotly() if plotly is loaded in your working session.
+
+I added the plotly:: so you know which package that function comes from.
+
+To add a regression line, lm for linear model. We want to look at all points together, not by county, so back to
+
+```{r}
+mygraph <- ggplot(price_median, aes(PctNonLatinxWhite, MedianSFPrice)) +
+  geom_point() +
+  theme_minimal()
+
+mygraph
+```
+
+Add linear regression line:
+
+```{r}
+mygraph +
+  geom_smooth(method = lm)
+```
+
+This includes a 95% confidence interval. To take out the shaded area, `se = FALS`E. Let R pick with a method of "auto":
+
+```{r}
+mygraph +
+  geom_smooth(method = "auto", se = FALSE)
+```
+
+There's MUCH more to regression than this, but we don't have time to go into it. If you're interested, you can see a nice tutorial by Kaggle data scientist Rachael Tatmen at  [https://www.kaggle.com/rtatman/regression-challenge-day-1](https://www.kaggle.com/rtatman/regression-challenge-day-1).
+
+
+Our last viz will be a bar plot. Let's look at median prices for Boston, Cambridge, Somerville, Brookline, and Everett. We'll read in a new data set:
+
+```{r}
+cities <- readr::read_csv("data/zillow_median_sfhome_by_city.csv") %>%
+  filter(City %in% c("Boston", "Cambridge", "Somerville", "Brookline", "Everett"))
+```
+
+Here's the base R version, although I tend not to use this for bar charts
+
+```{r}
+barplot(names = cities$City, height = cities$Price)
+```
+
+ggplot makes some nice bar plots, although it can be difficult for me to remember my specific customizations. So, I've saved my favorite look as an Rstudio "code snippet"
+
+If we have time, I'll show you a ggplot code snippet.
+
+First, go to Tools > Global Options > Code. At the bottom, make sure "Enable code snippets" is checked.
+
+Next, run
+
+`usethis::edit_rstudio_snippets()`
+
+In the file that's open, add the following somewhere. Make sure the 2nd and third lines start off with a tab indenting them.
+
+```
+snippet my_barplot
+  ggplot(${1:mydataframe}, aes(x=${2:myxcolname}, y=${3:myycolname})) + 
+  geom_bar(stat="identity", color = "black", fill="#0072B2")
+```
+
+Save and close the r.snippets file.
+  
+Now start typing `my_barplot` somewhere in your upper left RStudio pane and when you see the my_barplot dropdown, hit the tab key and see what happens. Fill in the name of mydataframe, then hit tab and fill in the name of the x column, and again fill in the y column.
+
+```{r}
+ggplot(cities, aes(x=City, y=Price)) + 
+  geom_col(color = "black", fill="#0072B2")
+```
+
+
+It can be helpful for the viewer to re-order the bars from large to small.
+
+```{r}
+ggplot(cities, aes(x=reorder(City, -Price), y=Price)) + 
+  geom_col(color = "black", fill="#0072B2")  
+```
+
+See how to do RStudio code snippets in one of my Do More With R video screencasts: 
+[https://youtu.be/h_i__VTSurU](https://youtu.be/h_i__VTSurU).
+
+A couple of other general R resources that might be useful:
+
+* Searchable table of almost 200 tasks and how to do them in R, including ggplot
+# [https://smach.github.io/R4JournalismBook/HowDoI.html](https://smach.github.io/R4JournalismBook/HowDoI.html)
+
+* Of course, my book [https://bit.ly/R4Journalism](https://bit.ly/R4Journalism). Use discount code  SCI19 to get 20% off
+
