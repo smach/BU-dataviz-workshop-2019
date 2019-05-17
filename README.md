@@ -19,7 +19,7 @@ Here's how to get your system ready for the workshop!
 
 4. The usethis package will help you download and install the files and additional packages you need, with just one line of code! On your consoles' command line, type `usethis::use_course("smach/BU-dataviz-workshop-2019", "your/dir/path")` making sure to replace _your/dir/path_ to the directory path under which you want to download the files. _The directory path must already exist._ Then hit enter. <br /><br />Note: I have more detailed instructions about this in a free online excerpt from my book, Practical R for Mass Communication and Journalism.
 
-5. Find the file `BU-dataviz-workshop-2019.Rproj` and click on it to open it. It should open in RStudio in the proper directory. Next, type `source("config.R")` in your console. That should install all the additional packages that you'll need. If you are asked whether you want to compile any packages from source, say no (that will install newer versions, but it's a bit more complicated and not necessary).
+5. Your project should open in the project directory. (If by any reason it doesn't, find the file `BU-dataviz-workshop-2019.Rproj` and click on it to open it. It should open in RStudio in the proper directory.) Next, type `source("config.R")` in your console. That should install all the additional packages that you'll need. If you are asked whether you want to compile any packages from source, say no (that will install newer versions, but it's a bit more complicated and not necessary).
 
 That's it, you should be ready to go!
 
