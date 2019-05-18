@@ -249,10 +249,59 @@ mygraph
 mygraph +
   geom_smooth(method = lm)
 
-# includes a 95% confidence interval. To take out the shaded area, se = FALSE. Let R pick with a method of "auto":
+# includes a 95% confidence interval. Not much of a relationship, even when considering the confidence interval. To take out the shaded area, se = FALSE.
+
+mygraph +
+  geom_smooth(method = lm, se = FALSE) 
+
+# Let R pick with a method of "auto":
 
 mygraph +
   geom_smooth(method = "auto", se = FALSE)
+
+
+# Now let's look just at Boston
+
+boston <- filter(price_median, City == "Boston")
+
+ggplot(boston, aes(PctNonLatinxWhite, MedianSFPrice)) +
+  geom_point(size = 2) +
+  theme_few() +
+  geom_smooth(method = lm)
+
+# Looks like perhaps more of one. Which makes sense, since Boston is generally more expensive than outer suburbs, while many outer suburbs are heavily white. Considering just Boston takes out one important pricing factor: Distance from Boston.
+
+# You can see the statistics behind the correlation with cor.test()
+
+cor.test(boston$PctNonLatinxWhite, boston$MedianSFPrice)
+
+# It's still not incredibly strong. One reason could be that Zip Codes don't necessarily correlate with neighborhoods. However, another reason may be that those two high-priced outliers are affecting the trend. What does it look like for areas where the median price is under a million dollars?
+
+
+boston2 <- filter(boston, MedianSFPrice < 1000000)
+
+ggplot(boston2, aes(PctNonLatinxWhite, MedianSFPrice)) +
+  geom_point(size = 2) +
+  theme_few() +
+  geom_smooth(method = lm)
+
+# That's pretty dramatic! By the way, you can get rid of the scientific notation with
+
+options(scipen = 999)
+
+# I'll also put dollar signs on the y axis
+
+ggplot(boston2, aes(PctNonLatinxWhite, MedianSFPrice)) +
+  geom_point(size = 2) +
+  theme_few() +
+  scale_y_continuous(labels = dollar) +
+  geom_smooth(method = lm)
+
+
+# Now look at the correlation:
+
+cor.test(boston2$PctNonLatinxWhite, boston2$MedianSFPrice)
+
 
 # There's MUCH more to regression than this, but we don't have time to go into it. If you're interested, you can see nice tutorial by Kaggle data scientist Rachael Tatmen at
 # https://www.kaggle.com/rtatman/regression-challenge-day-1
@@ -272,7 +321,7 @@ barplot(names = cities$City, height = cities$Price)
 
 
 # If we have time, I'll show you a ggplot code snippet.
-. 
+
 # First, go to Tools > Global Options > Code. At the bottom, make sure "Enable code snippets" is checked.
 
 # Next, run
