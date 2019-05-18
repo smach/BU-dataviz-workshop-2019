@@ -370,6 +370,9 @@ You can see the statistics behind the correlation with `cor.test()`
 cor.test(boston$PctNonLatinxWhite, boston$MedianSFPrice)
 ```
 
+A useful add-on  R package for correlations is [corr](https://github.com/drsimonj/corrr).
+
+
 It's still not incredibly strong. One reason could be that Zip Codes don't necessarily correlate with neighborhoods. However, another reason may be that those two high-priced outliers are affecting the trend. What does it look like for areas where the median price is under a million dollars?
 
 ```{r}

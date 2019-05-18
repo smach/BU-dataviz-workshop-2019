@@ -306,6 +306,9 @@ cor.test(boston2$PctNonLatinxWhite, boston2$MedianSFPrice)
 # There's MUCH more to regression than this, but we don't have time to go into it. If you're interested, you can see nice tutorial by Kaggle data scientist Rachael Tatmen at
 # https://www.kaggle.com/rtatman/regression-challenge-day-1
 
+# And a useful add-on R package for correlations is corr
+# https://github.com/drsimonj/corrr
+
 
 # Our last viz will be a bar plot. Let's look at median prices for Boston, Cambridge, Somerville, Brookline, and Everett. We'll read in a new data set:
 
@@ -321,7 +324,7 @@ barplot(names = cities$City, height = cities$Price)
 
 
 # If we have time, I'll show you a ggplot code snippet.
-
+ 
 # First, go to Tools > Global Options > Code. At the bottom, make sure "Enable code snippets" is checked.
 
 # Next, run
@@ -359,4 +362,9 @@ ggplot(cities, aes(x=reorder(City, -Price), y=Price)) +
 # Of course, my book
 # https://bit.ly/R4Journalism
 # Use discount code  SCI19 to get 20% off
+
+
+
+
+
 
